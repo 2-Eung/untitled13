@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class Main {
@@ -14,12 +13,13 @@ public class Main {
         fruits.add("Apple");
         fruits.add("Mango");
 
-        Collections.sort(fruits);                // 알파벳 오름차순 으로 정렬 ( 유니코드 순서, 대문자가 먼저임 )
-                                                 // 반복문을 통해 모든 요소의 크기를 비교함
-
-        for(String fruit : fruits) {
-            System.out.println(fruit);
+        if (fruits.contains("Kiwi")) {
+            System.out.println("Kiwi 는 포함되어 있습니다.");
         }
-
+        if (fruits.contains("Banana")) {
+            System.out.println("Banana 는 포함되어 있습니다.");
+        }
+//        fruits.get(1).equals()                // contains 는 이 원리여서 대소문자 구분함
+//        fruits.get(1).equals().toUpper~~      // 이걸 따로 만들어서 대소문자 구분안하기 구현가능
     }
 }

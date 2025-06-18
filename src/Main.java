@@ -13,13 +13,20 @@ public class Main {
         fruits.add("Apple");
         fruits.add("Mango");
 
-        if (fruits.contains("Kiwi")) {
-            System.out.println("Kiwi 는 포함되어 있습니다.");
+        fruits.remove("DragonFruit");   // 직접 지우기
+        fruits.remove(3);            // 인덱스로 지우기
+
+        for (String fruit : fruits) {
+            System.out.println(fruit);
         }
-        if (fruits.contains("Banana")) {
-            System.out.println("Banana 는 포함되어 있습니다.");
-        }
-//        fruits.get(1).equals()                // contains 는 이 원리여서 대소문자 구분함
-//        fruits.get(1).equals().toUpper~~      // 이걸 따로 만들어서 대소문자 구분안하기 구현가능
+
+        System.out.println(fruits.size());
+        System.out.println(fruits.isEmpty());
+
+        fruits.clear();
+
+        System.out.println(fruits.size());
+        System.out.println(fruits.isEmpty());       // 장바구니 비었는지 체크
+
     }
 }
